@@ -1,0 +1,258 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  font-family: "Quicksand";
+  color: #333;
+  font-size: 20px;
+}
+/* Nav-style */
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: rgb(20, 20, 20);
+}
+.navbar h1 {
+  margin-left: 4rem;
+  color: #fff;
+}
+
+.navbar .nav-links {
+  margin-left: auto;
+}
+
+.navbar a {
+  color: #fff;
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+.navbar a:hover {
+  color: #f8e3ea;
+}
+
+.footer {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 6vh;
+  bottom: 0;
+  left: 0;
+  background: #f0ebed;
+  color: rgb(114, 104, 104);
+  align-items: center;
+}
+
+.footer p {
+  margin-left: 10vh;
+}
+
+.content {
+  max-width: 100%;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home h1 {
+  margin-top: 50px;
+  font-size: 4rem;
+}
+
+/* Table-style */
+/* .tbl-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 1rem;
+} */
+
+/* table {
+  border-collapse: collapse;
+  width: auto;
+  border-radius: 10px;
+} */
+
+/* th,
+td {
+  border: 1px solid #fff7f7;
+  text-align: left;
+  padding: 8px;
+  font-size: 20px;
+} */
+
+/* th {
+  background-color: rgb(117, 201, 250);
+}
+
+td {
+  background-color: rgb(245, 248, 250);
+} */
+
+/* table-btn-style */
+button {
+  color: #333;
+  width: 6rem;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-addModal {
+  background-color: #45f135;
+  width: 15%;
+  margin-bottom: 0.5rem;
+}
+
+.btn-edit {
+  background-color: #f3f042;
+}
+
+.btn-delete {
+  background-color: #f14235;
+  /* margin-left: 10px; */
+}
+
+/* Modal-style */
+.modal-bg {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.modal-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-body {
+  width: 25rem;
+  height: 24rem;
+  background: white;
+  color: white;
+  z-index: 10;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
+}
+
+.modal-header {
+  height: 50px;
+  background: white;
+  overflow: hidden;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.heading {
+  margin: 0;
+  padding: 10px;
+  color: #2c3e50;
+  font-weight: 500;
+  font-size: 25px;
+  text-align: center;
+}
+
+.modal-content {
+  padding: 20px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.modal-action {
+  position: absolute;
+  bottom: 2px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.btn-container,
+.action-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.modal-save-btn {
+  margin-top: 10px;
+  cursor: pointer;
+  /* font-weight: 500; */
+  padding: 11px 28px;
+  border-radius: 10px;
+  /* font-size: 0.8rem; */
+  border: none;
+  color: #fff;
+  background: #513eff;
+  transition: all 0.25s ease;
+}
+
+.modal-cancel-btn {
+  margin-top: 10px;
+  cursor: pointer;
+  /* font-weight: 500; */
+  padding: 11px 28px;
+  border-radius: 12px;
+  /* font-size: 0.8rem; */
+  border: none;
+  color: #2c3e50;
+  background: #fcfcfc;
+  transition: all 0.25s ease;
+}
+
+.modal-delete-btn {
+  width: 8rem;
+  margin-top: 10px;
+  cursor: pointer;
+  /* font-weight: 500; */
+  padding: 11px 28px;
+  border-radius: 12px;
+  /* font-size: 0.8rem; */
+  border: none;
+  color: #333;
+  background: #f14235;
+  transition: all 0.25s ease;
+}
+
+.modal-content label {
+  text-align: left;
+  display: block;
+}
+
+.modal-content input,
+.modal-content textarea,
+.modal-content select {
+  width: 100%;
+  resize: none;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
